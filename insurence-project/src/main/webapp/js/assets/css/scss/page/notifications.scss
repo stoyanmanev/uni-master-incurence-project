@@ -1,0 +1,60 @@
+.notification-area{
+    position: fixed;
+    bottom: 40px;
+    left: $base-gap;
+    max-width: 240px;
+    background-color: $primary;
+    transform: translateX(calc(-100% - 36px));
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 9999999;
+    min-height: 100px;
+    min-width: 200px;
+
+    &.error{
+        background-color: $alert;
+    }
+    &.success{
+        background-color: #28a745;
+    }
+    &.warning{
+        background-color: #ffc107;
+    }
+
+    .close{
+        position: absolute;
+        top: $base-gap / 2 - 2px;
+        right: $base-gap / 2 - 2px;
+        font-size: 12px;
+        line-height: 12px;
+        color: $light;
+        cursor: pointer;
+    }
+
+    &.show-notification{
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+
+        &.animation{
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+}
+.note-content{
+    height: 100%;
+    width: 100%;
+    display: block;
+    color: $light;
+    padding: $base-gap;
+    font-size: 16px;
+    line-height: 26px;
+    strong{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

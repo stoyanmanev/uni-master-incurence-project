@@ -1,0 +1,122 @@
+// Form styles
+form.default {
+	overflow: hidden;
+	min-width: 30vw;
+	width: 100%;
+
+	::placeholder {
+		color:  rgba($dark, 0.7);
+	}
+
+	fieldset {
+		border: none;
+		margin: 0 0 3.5rem 0;
+	}
+
+	[type="text"],
+	button,
+	[type="submit"] {
+		min-height: rem(56px);
+	}
+
+	label {
+		color: inherit;
+		display: block;
+		padding: 1rem 0 0.6rem;
+		position: relative;
+		clear:both;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+
+		small {
+			color: $alert;
+			display: inline-block;
+			line-height: 0.5rem;
+		}
+	}
+
+	[type="text"],
+	[type="tel"],
+	[type="email"],
+	[type="file"],
+	[type="date"],
+	[type="number"],
+	input,
+	textarea,
+	select {
+		background: $light;
+		border: 1px solid $dark;
+		color: $dark;
+		display: block;
+		font-family: $main-font;
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		min-height: 56px;
+		margin: 0 0 0.5rem 0;
+		padding: 0.8rem;
+		position: relative;
+		resize: none;
+		width: 100%;
+		border-radius: 4px;
+
+		&:focus {
+			background: darken($light, 2%);
+			outline: none;
+		}
+	}
+	[type="file"]{
+		padding: 9px 13px;
+	}
+	textarea {
+		min-height: 5rem;
+		padding-top: 0.9rem;
+	}
+
+	button,
+	[type="submit"] {
+		@extend .btn;
+		margin: 0 0 1.75rem;
+		width: 100%;
+		transition: all .3s ease-in-out;
+		margin-top: 30px;
+		&:hover{
+			color: $light;
+			background-color: $primary;
+		}
+    }
+	div[data-field-error] {
+		color: $light;
+		background:$alert;
+		padding:10px 12px;
+		clear: both;
+		display: block;
+		margin-bottom: $base-gap;
+	}
+	
+	select{
+		option{
+			&:first-child{
+				display: none;
+			}
+		}
+	}
+}
+
+.login-container{
+	padding: 150px 0 122px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#create-client-form{
+	button,
+	[type="submit"] {
+		margin-top: 0px;
+		padding: 15px $base-gap;
+		
+    }
+}

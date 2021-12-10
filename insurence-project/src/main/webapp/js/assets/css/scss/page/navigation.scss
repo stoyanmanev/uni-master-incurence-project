@@ -1,0 +1,73 @@
+#navigation{
+    nav{
+        ul{
+            &.navi{
+                &.navi-main{
+                    margin-bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    list-style: none;
+                    li{
+                        a{
+                            display: block;
+                            color: $light;
+                            font-size: 16px;
+                            line-height: 28px;
+                            font-weight: 400;
+                            text-decoration: none;
+                            @extend %animated-transform;
+
+                            &:hover,
+                            &:active,
+                            &:focus{
+                                color: $alert;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#navigation-credentials{
+    margin: 0 $base-line-height;
+
+    ul{
+        padding: 12px 12px 0;
+        margin-bottom: 0;
+        background-color: $light;
+        border: 3px solid rgb(247, 247, 249);
+        box-shadow: 0px 0px 4px 0.5px rgba(0,0,0,0.1);
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+
+        &.navi-cred{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            li{
+                margin-bottom: 12px;
+                a,span{
+                    border-right: 1px solid $light;
+                    border-top-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    background-color: #6c757d;
+                    text-decoration: none;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: $light;
+                    display: block;
+                    padding: 6px 12px;
+                    @extend %animated-transform;
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        background-color: #545b62;
+                    }
+                }
+            }
+        }
+    }
+}

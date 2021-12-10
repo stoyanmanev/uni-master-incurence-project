@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+$main-font: 'Poppins', sans-serif;
+$icon-font: "Font Awesome 5 Free";
+
+$primary: #221f3c;
+$secondary: #050020;
+$dark: #000000;
+$light: #ffffff;
+$alert: #ff1f1f;
+$medium: #f8f8fc;
+
+$base-font-size: 16px;
+$base-line-height: 28px;
+
+$base-gap: 18px;
+
+%animated-transform{
+    transition: all .3s ease-in-out;
+}
+.margin-bottom{
+    margin-bottom: $base-line-height;
+}
+
+@keyframes move-top-bottom {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-$base-line-height);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
